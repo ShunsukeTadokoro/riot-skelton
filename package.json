@@ -1,0 +1,81 @@
+{
+  "name": "riot-skelton",
+  "author": "Shunsuke Tadokoro",
+  "description": "Riot.js skelton with es6 via babel & webpack.",
+  "license": "MIT",
+  "version": "0.0.1",
+  "keywords": [
+    "riotjs",
+    "es6",
+    "babel",
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "config": {
+    "srcDir": "./src",
+    "entry": "./index.js",
+    "buildDir": "./build",
+    "devHost": "localhost",
+    "devPort": 8000
+  },
+  "scripts": {
+    "build": "NODE_ENV=production npm run webpack",
+    "start": "NODE_ENV=development node dev-server ./webpack/config",
+    "lint": "eslint ./app ./webpack && echo No linting errors.",
+    "webpack": "webpack --colors --progress --config ./webpack/config"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "opn": "^4.0.2",
+    "rimraf": "^2.5.2",
+    "riot": "^2.4.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    },
+    "globals": {
+      "describe": true,
+      "it": true,
+      "sinon": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "strict": [
+        2,
+        "global"
+      ],
+      "indent": [
+        2,
+        2
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "no-alert": 0,
+      "no-underscore-dangle": 0
+    }
+  }
+}
